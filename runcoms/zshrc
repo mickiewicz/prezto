@@ -28,6 +28,11 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 autoload -U compinit && compinit
 autoload -Uz bashcompinit && bashcompinit
 
+bindkey "^[d" backward-kill-word
+bindkey "^[D" kill-word
+bindkey "^[f" forward-word
+bindkey "^[b" backward-word
+
 up() {
     if [ -z "$1" ]; then
         return
